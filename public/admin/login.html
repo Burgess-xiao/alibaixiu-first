@@ -28,7 +28,9 @@
   <script src="../assets/vendors/jquery/jquery.min.js"></script>
   <script>
     $('#loginbtn').on('click', function () {
+      // 获取输入的邮箱
       let email = $('#email').val();
+      // 获取输入的密码
       let password = $('#password').val();
       if (email.trim().length === 0) {
         alert('请输入邮箱')
@@ -48,7 +50,7 @@
         success: function (response) {
           // location.assign('index.html')
           location.href = ('index.html')
-          // location.replace('index.html')
+          // location.replace('index.html')  // 不保留缓存
         },
         error: function () { 
           alert('登录失败，请重新输入')
