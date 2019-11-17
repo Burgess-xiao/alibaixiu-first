@@ -7,9 +7,16 @@ $('#logout').on('click', function () {
             success: function () {
                 location.href = 'login.html'
             },
-            error:function () {
+            error: function () {
                 alert('退出失败')
             }
         });
     }
 })
+
+// 处理日期格式
+function formateDate(date) {
+    // 将日期时间字符串转为日期对象
+    date = new Date(date)
+    return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+}

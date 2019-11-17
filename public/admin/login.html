@@ -49,6 +49,7 @@
         },
         success: function (response) {
           // location.assign('index.html')
+          localStorage.setItem('user',JSON.stringify(response))
           location.href = ('index.html')
           // location.replace('index.html')  // 不保留缓存
         },

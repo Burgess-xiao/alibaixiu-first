@@ -31,7 +31,7 @@
         <strong>错误！</strong>发生XXX错误
       </div> -->
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" id="formBox">
           <form id="addCategory">
             <h2>添加分类</h2>
             <div class="form-group">
@@ -119,6 +119,22 @@
         </td>
       </tr>
       {{/each}}
+  </script>
+  <script type="text/html" id="modifycategoryTpl">
+    <form id="modifyCategory" data-id="{{_id}}">
+      <h2>修改分类</h2>
+      <div class="form-group">
+        <label>名称</label>
+        <input class="form-control" type="text" placeholder="请输入分类名称" name="title" value="{{title}}">
+      </div>
+      <div class="form-group">
+        <label>图标</label>
+        <input class="form-control" type="text" placeholder="请输入分类图标类名" name="className" value="{{className}}">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">添加</button>
+      </div>
+    </form>
   </script>
   <script>NProgress.done()</script>
 
